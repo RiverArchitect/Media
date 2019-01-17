@@ -1,6 +1,3 @@
----------------------------------------
- RiverArchitect / README.md
----------------------------------------
 
 River Architect is a Python 2 - based open-source package that supports stream designers with a set of 
 GUI modules. The current core functionalities are:
@@ -22,11 +19,6 @@ The code was developed based on data from California's Yuba River and example re
 
 Future developments will focus on improving the GUI, developing the ModifyTerrain module for automating
 terraforming planning, and providing a version that works with QGIS's Python core.
-
-
----------------------------------------
- MISC COMMENTS AND SUGGESTIONS
----------------------------------------
 
  - Please read the user manual in 00_Documentation / RiverArchitect_Manual.pdf for notes on how to setup
    and use River Architect.
