@@ -29,4 +29,4 @@ terraforming planning, and providing a version that works with QGIS's Python cor
    
 ---------------------------------------
  Thank you for using River Architect.
----------------------------------------
+
