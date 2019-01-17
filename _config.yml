@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 title: River Architect
+baseurl: "/RiverArchitect/"
+url: "https://sschwindt.github.io"
