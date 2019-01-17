@@ -1,5 +1,5 @@
 ---------------------------------------
- river-architect / README.md
+ RiverArchitect / README.md
 ---------------------------------------
 
 River Architect is a Python 2 - based open-source package that supports stream designers with a set of 
