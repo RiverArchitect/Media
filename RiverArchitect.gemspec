@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.summary       = 'River Architect helps designing rivers'
 
   s.files         = `git ls-files -z`.split("\x0").select do |f|
-    f.match(%r{^((.site_package|00_Documentation|HabitatEvaluation|LifespanDesign)/|(LICENSE|README)((\.(md|markdown)|$)))}i)
+    f.match(%r{^((RiverArchitect)/|(LICENSE|README)((\.(md|markdown)|$)))}i)
   end
   
   s.add_runtime_dependency 'jekyll', '~> 3.5'
