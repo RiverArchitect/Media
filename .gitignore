@@ -1,5 +1,8 @@
 # Ignore everything in repository root
 /*
 
+# do not ignore this file
+!.gitignore
+
 # Folder to not ignore
 !/RiverArchitect/
