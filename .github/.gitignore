@@ -1,0 +1,5 @@
+# Ignore everything in repository root
+/*
+
+# Folder to not ignore
+!/RiverArchitect/
