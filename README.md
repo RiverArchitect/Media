@@ -1,4 +1,4 @@
-# What does River Architect?
+# What can I do with River Architect?
 
 River Architect is a Python 2 - based open-source package that supports stream designers with a set of 
 GUI modules. The current core functionalities are:
