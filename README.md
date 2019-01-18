@@ -1,5 +1,5 @@
 
-River Architect is a Python 2 - based open-source package that supports stream designers with a set of 
+River Architect [[https://github.com/sschwindt/RiverArchitect/tree/master/images/logo.png|alt=logo]] is a Python 2 - based open-source package that supports stream designers with a set of 
 GUI modules. The current core functionalities are:
 
  - Lifespan mapping of stream design features according to Schwindt et al. (2019): 
