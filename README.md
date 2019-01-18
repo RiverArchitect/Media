@@ -21,7 +21,7 @@ GUI modules. The current core functionalities are:
 
 # How to use it?
 
-Download the complete program file directory tree from  [https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect][2]
+Download the complete program file directory tree as zip. The main programm and modules are contained in the [RiverArchitect/RiverArchitect/][2] directory.
 
 Or download particular modules; note that all modules require the .site_packages/ and the 01_Conditions/ folders.
 
