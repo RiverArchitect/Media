@@ -1,5 +1,4 @@
-# River Architect
-
+# River Architect ![RiverArchitect](https://github.com/sschwindt/RiverArchitect/raw/master/images/logo.png)
 River Architect is a Python 2 - based open-source package that supports stream designers with a set of 
 GUI modules. The current core functionalities are:
 
@@ -22,7 +21,7 @@ GUI modules. The current core functionalities are:
 
 # How to use it?
 
-Download the complete program file directory tree from  @ https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect
+Download the complete program file directory tree from  [https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect][2]
 
 Or download particular modules; note that all modules require the .site_packages/ and the 01_Conditions/ folders.
 
@@ -47,3 +46,4 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
+[2]: https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect
