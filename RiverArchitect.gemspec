@@ -2,7 +2,7 @@ Gem::Specification.new do |s|
   s.name          = 'RiverARchitect'
   s.version       = '0.0'
   s.license       = 'GNU General Public License v3.0'
-  s.authors       = ['Sebastian Schwindt', 'Gregorz B. Pasternack']
+  s.authors       = ['Sebastian Schwindt', 'Gregory B. Pasternack']
   s.email         = ['sschwindt@ucdavis.edu']
   s.homepage      = 'https://github.com/sschwindt/RiverArchitect/'
   s.summary       = 'River Architect helps designing rivers'
