@@ -43,4 +43,5 @@ Do not hesitate to contact sschwindt [at] ucdavis.edu and gpast [at] ucdavis.edu
 
 Bug reports, feature requests, and pull requests are welcome on GitHub at https://github.com/sschwindt/RiverArchitect .
 
+
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
