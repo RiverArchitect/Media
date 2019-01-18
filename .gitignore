@@ -1,12 +1,5 @@
-_site
-.bundle
-.sass-cache
-Gemfile.lock
-.DS_Store
-/README.md
-/_config.yml
-/images/
-/CODE_OF_CONDUCT.md
-/CONTRIBUTING.md
-/LICENSE
-/PULL_REQUEST_TEMPLATE.md
+# Ignore everything in repository root
+/*
+
+# Folder to not ignore
+!/RiverArchitect/
