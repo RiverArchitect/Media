@@ -185,7 +185,7 @@ class FaGui(tk.Frame):
         self.closemenu.add_command(label="Quit programm", command=lambda: self.myquit())
 
         # CHECK BOXES(CHECKBUTTONS)
-        self.cb_lyt = tk.Checkbutton(self, text="Create layouts after raster analysis", command=lambda:
+        self.cb_lyt = tk.Checkbutton(self, text="Create layouts after running raster maker", command=lambda:
                                      self.mod_mapping())
         self.cb_lyt.grid(sticky=tk.W, row=7, column=0, columnspan=4, padx=self.xd, pady=self.yd)
         self.cb_wild = tk.Checkbutton(self, text="Apply wildcard raster to spatially confine analysis", command=lambda:
