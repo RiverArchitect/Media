@@ -31,16 +31,12 @@ Please read the user manual in 00_Documentation / RiverArchitect_Manual.pdf for 
 # About
 The code was developed based on data from California's Yuba River and example results can be downloaded.
 
-Future developments will focus on improving the GUI, developing the ModifyTerrain module for automating
-terraforming planning, and providing a version that works with QGIS's Python core.
-
-Do not hesitate to contact sschwindt [at] ucdavis.edu and gpast [at] ucdavis.edu for reporting bugs,
-   suggestions, or any feedback.
+Future developments will focus on improving the GUIs, developing the ModifyTerrain module for automating
+terraforming planning, and migrating to QGIS's Python core.
 
 
 # Contributing
-
-Do not hesitate to contact sschwindt [at] ucdavis.edu and gpast [at] ucdavis.edu with suggestions or any feedback.
+Do not hesitate to contact sschwindt [at] ucdavis.edu and gpast [at] ucdavis.edu for reporting bugs, suggestions, or any feedback.
 
 Bug reports, feature requests, and pull requests are welcome on GitHub at https://github.com/sschwindt/RiverArchitect .
 
