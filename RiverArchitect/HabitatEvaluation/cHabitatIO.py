@@ -144,7 +144,7 @@ class Write:
         self.dict_Q_h_ras = {}
         self.dict_Q_u_ras = {}
         self.dir_in_ras = r""
-        self.dir_xlsx_out = os.path.dirname(os.path.abspath(__file__)) + "\\WUA\\"
+        self.dir_xlsx_out = os.path.dirname(os.path.abspath(__file__)) + "\\AUA\\"
 
         fg.chk_dir(self.dir_xlsx_out)
 

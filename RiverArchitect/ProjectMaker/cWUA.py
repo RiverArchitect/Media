@@ -17,7 +17,7 @@ except:
     print("ExceptionERROR: Missing RiverArchitect packages (required: fFunctions).")
 
 
-class CWUA:
+class CAUA:
     def __init__(self, unit, reach, stn, version):
         self.path2geodata = os.path.dirname(os.path.realpath(__file__)) + "\\" + str(reach).upper() + "_" + str(stn).lower() + "_" + str(version) + "\\Geodata\\"
         self.cache = self.path2geodata + ".cache\\"
@@ -37,14 +37,14 @@ class CWUA:
     def calculate_wua(self, exceedance_pr, usable_area):
         # exceedance_pr = LIST of discharge exceedance probabilities
         # usable_area =  LIST of usable habitat area corresponding to exceedance_pr
-        wua = []
+        aua = []
         for e in range(0, exceedance_pr.__len__()):
             if not (e == (exceedance_pr.__len__() - 1)):
                 pr = exceedance_pr[e]
             else:
                 pr = 100 - sum(exceedance_pr[0: e])
-            wua.append(pr / 100 * usable_area[e])
-        return sum(wua)
+            aua.append(pr / 100 * usable_area[e])
+        return sum(aua)
 
     def clear_cache(self, *args):
         try:
@@ -94,7 +94,7 @@ class CWUA:
 
         self.logger.info("   * converting CHSI raster to shapefile ...")
         try:
-            shp_name = self.cache + str(self.cache_count) + "wua.shp"
+            shp_name = self.cache + str(self.cache_count) + "aua.shp"
             arcpy.RasterToPolygon_conversion(ras4shp, shp_name, "NO_SIMPLIFY")
             arcpy.DefineProjection_management(shp_name, coord_sys)
         except arcpy.ExecuteError:
@@ -112,10 +112,10 @@ class CWUA:
         area = 0.0
         try:
             self.logger.info("     saving project CHSI shapefile of raster " + str(csi_raster) + " to:")
-            self.logger.info("     " + target_dir + str(self.cache_count) + "wua_eval.shp")
-            arcpy.CalculateAreas_stats(shp_name, target_dir + str(self.cache_count) + "wua_eval.shp")
+            self.logger.info("     " + target_dir + str(self.cache_count) + "aua_eval.shp")
+            arcpy.CalculateAreas_stats(shp_name, target_dir + str(self.cache_count) + "aua_eval.shp")
             self.logger.info("   * summing area ...")
-            with arcpy.da.UpdateCursor(target_dir + str(self.cache_count) + "wua_eval.shp", "F_AREA") as cursor:
+            with arcpy.da.UpdateCursor(target_dir + str(self.cache_count) + "aua_eval.shp", "F_AREA") as cursor:
                 for row in cursor:
                     try:
                         area += float(row[0])
@@ -198,4 +198,4 @@ class CWUA:
         arcpy.env.workspace = self.cache
 
     def __call__(self, *args, **kwargs):
-        print("Class Info: <type> = CWUA (ProjectProposal)")
+        print("Class Info: <type> = CAUA (ProjectProposal)")

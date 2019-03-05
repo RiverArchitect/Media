@@ -102,12 +102,12 @@ class MainGui(tk.Frame):
         self.fish_applied = {}
         self.max_columnspan = 5
         self.unit = "us"
-        self.wua_threshold = 0.4
+        self.aua_threshold = 0.4
 
         # Construct the Frame object.
         tk.Frame.__init__(self, master)
         self.apply_boundary = tk.BooleanVar()
-        self.cover_applies_wua = tk.BooleanVar()
+        self.cover_applies_aua = tk.BooleanVar()
         self.pack(expand=True, fill=tk.BOTH)
         self.master.iconbitmap(os.path.dirname(os.path.abspath(__file__))+"\\.templates\\code_icon.ico")
 
@@ -157,7 +157,7 @@ class MainGui(tk.Frame):
                                       command=lambda: self.activate_button(self.b_select_bshp))
         self.cb_bshp.grid(sticky=tk.W, row=0, rowspan=2, column=0, columnspan=self.max_columnspan - 1, padx=self.xd, pady=self.yd)
         self.cb_use_cov = tk.Checkbutton(self, text="Use cover CHSI (requires that 5b was executed)",
-                                         variable=self.cover_applies_wua,
+                                         variable=self.cover_applies_aua,
                                          onvalue=True, offvalue=False)
         self.cb_use_cov.grid(sticky=tk.W, row=13, column=0, columnspan=self.max_columnspan, padx=self.xd,
                              pady=self.yd)
@@ -182,14 +182,14 @@ class MainGui(tk.Frame):
         self.b_csi_c["state"] = "disabled"
 
         self.b_run_wua = tk.Button(self, width=30, bg="white",
-                                   text="6) Calculate Weighted Usable habitat Area (WUA)", anchor='w',
+                                   text="6) Calculate Annually Usable habitat Area (AUA)", anchor='w',
                                    command=lambda: self.start_app("wua", cover=False))
         self.b_run_wua.grid(sticky=tk.EW, row=14, column=0, columnspan=self.max_columnspan, rowspan=2,
                             padx=self.xd, pady=self.yd)
         self.b_run_wua["state"] = "disabled"
 
         self.b_wua_th = tk.Button(self, width=15, fg="RoyalBlue3", bg="white",
-                                  text="Set WUA\nthreshold\nCurrent: CHSI = " + str(self.wua_threshold),
+                                  text="Set AUA\nthreshold\nCurrent: CHSI = " + str(self.aua_threshold),
                                   command=lambda: self.set_wua())
         self.b_wua_th.grid(sticky=tk.EW, row=13, rowspan=4, column=self.max_columnspan, padx=self.xd, pady=self.yd)
         self.b_wua_th["state"] = "disabled"
@@ -326,7 +326,7 @@ class MainGui(tk.Frame):
                 self.l_inpath_hy.config(fg="red", text="SELECTION ERROR                                       ")
 
             self.b_csi_nc["state"] = "normal"
-            # update WUA buttons
+            # update AUA buttons
             if os.path.isdir(self.dir + "\\CHSI\\" + self.chsi_condition_hy + "\\"):
                 self.b_wua_th["state"] = "normal"
                 if os.path.isdir(self.dir + "\\CHSI\\" + self.chsi_condition_hy + "\\no_cover\\"):
@@ -342,7 +342,7 @@ class MainGui(tk.Frame):
             else:
                 self.l_inpath_cov.config(fg="red", text="SELECTION ERROR                                       ")
             self.b_csi_c["state"] = "normal"
-            # update WUA buttons
+            # update AUA buttons
             if os.path.isdir(self.dir + "\\CHSI\\" + self.chsi_condition_cov + "\\"):
                 self.b_wua_th["state"] = "normal"
                 if os.path.isdir(self.dir + "\\CHSI\\" + self.chsi_condition_cov + "\\cover\\"):
@@ -371,11 +371,11 @@ class MainGui(tk.Frame):
         self.b_wua_th["state"] = "disabled"
         self.master.wait_window(sub_frame.top)
         self.b_wua_th["state"] = "normal"
-        self.wua_threshold = float(sub_frame.value)
-        self.b_wua_th.config(text="Set WUA\nthreshold\nCurrent: CHSI = " + str(self.wua_threshold))
+        self.aua_threshold = float(sub_frame.value)
+        self.b_wua_th.config(text="Set AUA\nthreshold\nCurrent: CHSI = " + str(self.aua_threshold))
 
-        if float(self.wua_threshold) > 1.0:
-            showinfo("WARNING", "The CHSI threshold value for WUA calcula-\ntion needs to be smaller than 1.0.")
+        if float(self.aua_threshold) > 1.0:
+            showinfo("WARNING", "The CHSI threshold value for AUA calcula-\ntion needs to be smaller than 1.0.")
 
     def shout_dict(self, the_dict):
         msg = "Selected fish:"
@@ -440,7 +440,7 @@ class MainGui(tk.Frame):
                 if not (ans == "OK"):
                     showinfo("WARNING", "No HSI rasters were available for the selected fish species -- lifestage.")
                 else:
-                    # update WUA buttons
+                    # update AUA buttons
                     self.b_run_wua["state"] = "normal"
                     self.b_wua_th["state"] = "normal"
                     webbrowser.open(combine_hsi.path_csi)
@@ -449,7 +449,7 @@ class MainGui(tk.Frame):
 
         if app_name == "wua":
             try:
-                if self.cover_applies_wua.get():
+                if self.cover_applies_aua.get():
                     wua = chsi.CHSI(self.chsi_condition_cov, True, self.unit)
                 else:
                     try:
@@ -460,7 +460,7 @@ class MainGui(tk.Frame):
                     except:
                         showinfo("INFO", "Using \'WITH COVER\' option (hydraulic only condition is empty).")
                         wua = chsi.CHSI(self.chsi_condition_cov, self.cover_applies, self.unit)
-                ans = wua.calculate_wua(self.wua_threshold, self.fish_applied)
+                ans = wua.calculate_wua(self.aua_threshold, self.fish_applied)
                 wua.clear_cache()
 
                 if ans == "OK":
@@ -468,7 +468,7 @@ class MainGui(tk.Frame):
                 else:
                     showinfo("WARNING", "No CHSI rasters were available for the selected fish species -- lifestage.")
             except:
-                showinfo("ERROR", "Could not instantiate CHSI object for WUA calculation.")
+                showinfo("ERROR", "Could not instantiate CHSI object for AUA calculation.")
 
         if app_name == "no_condition":
             msg = "CONFIRM HABITAT CONDITION !"

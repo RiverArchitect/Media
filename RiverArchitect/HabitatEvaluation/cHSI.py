@@ -38,7 +38,7 @@ class CHSI:
         else:
             p_ext = "no_cover"
         self.path_csi = os.path.dirname(os.path.abspath(__file__)) + "\\CHSI\\" + str(self.condition) + "\\" + p_ext + "\\"
-        self.path_wua_ras = os.path.dirname(os.path.abspath(__file__)) + "\\WUA\\Rasters\\" + str(self.condition) + "\\" + p_ext + "\\"
+        self.path_wua_ras = os.path.dirname(os.path.abspath(__file__)) + "\\AUA\\Rasters\\" + str(self.condition) + "\\" + p_ext + "\\"
         fg.chk_dir(self.cache)
         fg.chk_dir(self.path_csi)
         fg.chk_dir(self.path_wua_ras)
@@ -56,7 +56,7 @@ class CHSI:
         self.xlsx_out = ""
 
     def calculate_wua(self, wua_threshold, fish):
-        # wua_threshold =  FLOAT -- value between 0.0 and 1.0
+        # aua_threshold =  FLOAT -- value between 0.0 and 1.0
         # fish = DICT -- fish.keys()==species_names; fish.values()==lifestages
         arcpy.CheckOutExtension('Spatial')
         arcpy.env.overwriteOutput = True
@@ -74,12 +74,12 @@ class CHSI:
                 else:
                     xsn = self.condition + "_" + fish_shortname + ".xlsx"
 
-                xlsx_name = os.path.dirname(os.path.abspath(__file__)) + "\\WUA\\" + xsn
+                xlsx_name = os.path.dirname(os.path.abspath(__file__)) + "\\AUA\\" + xsn
                 xlsx = chio.Write()
                 xlsx.open_wb(xlsx_name, 0)
 
                 Q = xlsx.read_column("B", 4)
-                self.logger.info(" >> Reducing CHSI rasters to WUA threshold (" + str(wua_threshold) + ") ...")
+                self.logger.info(" >> Reducing CHSI rasters to AUA threshold (" + str(wua_threshold) + ") ...")
                 for csi in csi_list:
                     self.logger.info("    -- CHSI raster: " + str(csi))
                     if fish_shortname in str(csi):
@@ -89,17 +89,17 @@ class CHSI:
                     dsc = arcpy.Describe(ras_csi)
                     coord_sys = dsc.SpatialReference
                     rel_ras = Con(Float(ras_csi) >= float(wua_threshold), Float(ras_csi))
-                    self.logger.info("       * saving WUA-CHSI raster ...")
+                    self.logger.info("       * saving AUA-CHSI raster ...")
                     try:
                         rel_ras.save(self.path_wua_ras + str(csi))
                     except:
-                        self.logger.info("ERROR: Could not save WUA-CHSI raster.")
+                        self.logger.info("ERROR: Could not save AUA-CHSI raster.")
 
                     ras4shp = Con(~IsNull(rel_ras), 1)
 
-                    self.logger.info("       * converting WUA-CHSI raster to shapefile ...")
+                    self.logger.info("       * converting AUA-CHSI raster to shapefile ...")
                     try:
-                        shp_name = self.cache + str(cc) + "wua.shp"
+                        shp_name = self.cache + str(cc) + "aua.shp"
                         arcpy.RasterToPolygon_conversion(ras4shp, shp_name, "NO_SIMPLIFY")
                         arcpy.DefineProjection_management(shp_name, coord_sys)
                     except arcpy.ExecuteError:
@@ -116,9 +116,9 @@ class CHSI:
                     self.logger.info("       * calculating area ...")
                     area = 0.0
                     try:
-                        arcpy.CalculateAreas_stats(shp_name, self.cache + str(cc) + "wua_eval.shp")
+                        arcpy.CalculateAreas_stats(shp_name, self.cache + str(cc) + "aua_eval.shp")
                         self.logger.info("         summing up area ...")
-                        with arcpy.da.UpdateCursor(self.cache + str(cc) + "wua_eval.shp", "F_AREA") as cursor:
+                        with arcpy.da.UpdateCursor(self.cache + str(cc) + "aua_eval.shp", "F_AREA") as cursor:
                             for row in cursor:
                                 try:
                                     area += float(row[0])
