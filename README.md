@@ -3,7 +3,7 @@ River Architect is a Python 2 - based open-source package that supports stream d
 GUI modules. The current core functionalities are:
 
  * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1].
-    + Modules: LifespanDesign and MaxLifespan
+    + Modules: LifespanDesign and MaxLifespan    
  * Calculating terraforming activities (mass differences and simple terrain modifications).
     + Module: ModifyTerrain
  * Habitat quality evaluations for various aquatic species.
@@ -14,8 +14,11 @@ GUI modules. The current core functionalities are:
 # Requirements
 
  * Digital terrain elevation models (DEMs).
- * 2D hydrodynamic modeling of multiple steady discharge scenarios.
+ 
+ * 2D hydrodynamic modeling of multiple steady flow scenarios.
+ 
  * ESRI ArcMap and licenses for SpatialAnalyst (comming soon: update for ArcPro and Python 3).
+ 
  * Batchfile launches are designed for working on any Windows platform.
 
 
@@ -28,6 +31,8 @@ GUI modules. The current core functionalities are:
 3) Open the manual ([direct download link][3]) and follow the instructions in section 3 (Getting started)
 
 4) Run the packages for stream design (package overview in section 1 of the [manual][3])
+
+River Architect with a set of pre-generated sample files can be downloaded [here][4] (irregular updates).
 
 
 # About
@@ -46,3 +51,4 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
 [2]: https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect
 [3]: https://github.com/sschwindt/RiverArchitect/blob/master/RiverArchitect/00_Documentation/RiverArchitect_Manual_v01.pdf
+[4]: https://www.dropbox.com/s/lkuqkm089rb0mm4/RiverArchitect_with_Example.zip?dl=0
