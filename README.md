@@ -15,7 +15,7 @@ GUI modules. The current core functionalities are:
 
  * Digital terrain elevation models (DEMs).
  * 2D hydrodynamic modeling of multiple steady discharge scenarios.
- * ESRI ArcGIS licenses for SpatialAnalyst.
+ * ESRI ArcMap and licenses for SpatialAnalyst (comming soon: update for ArcPro and Python 3).
  * Batchfile launches are designed for working on any Windows platform.
 
 
