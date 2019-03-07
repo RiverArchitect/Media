@@ -21,11 +21,13 @@ GUI modules. The current core functionalities are:
 
 # How to use it?
 
-Download the complete program file directory tree as zip. The main programm and modules are contained in the [RiverArchitect/RiverArchitect/][2] directory.
+1) Download the complete program file directory tree as zip. 
 
-Or download particular modules; note that all modules require the .site_packages/ and the 01_Conditions/ folders.
+2) The main programm and modules are contained in the [RiverArchitect/RiverArchitect/][2] directory.
 
-Please read the user manual in 00_Documentation / RiverArchitect_Manual.pdf for notes on how to setup and use River Architect.
+3) Open the manual ([direct download link][3]) and follow the instructions in section 3 (Getting started)
+
+4) Run the packages for stream design (package overview in section 1 of the [manual][3])
 
 
 # About
@@ -43,3 +45,4 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
 [2]: https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect
+[3]: https://github.com/sschwindt/RiverArchitect/blob/master/RiverArchitect/00_Documentation/RiverArchitect_Manual_v01.pdf
