@@ -17,7 +17,7 @@ GUI modules. The current core functionalities are:
  
  * 2D hydrodynamic modeling of multiple steady flow scenarios.
  
- * ESRI ArcMap and licenses for SpatialAnalyst (comming soon: update for ArcPro and Python 3).
+ * ESRI ArcMap and licenses for SpatialAnalyst (coming soon: update for ArcPro and Python 3).
  
  * Batchfile launches are designed for working on any Windows platform.
 
@@ -26,7 +26,7 @@ GUI modules. The current core functionalities are:
 
 1) Download the complete program file directory tree as zip. 
 
-2) The main programm and modules are contained in the [RiverArchitect/RiverArchitect/][2] directory.
+2) The main program and modules are contained in the [RiverArchitect/RiverArchitect/][2] directory.
 
 3) Open the manual ([direct download link][3]) and follow the instructions in section 3 (Getting started)
 
