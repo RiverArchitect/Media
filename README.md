@@ -2,14 +2,13 @@
 River Architect is a Python 2 - based open-source package that supports stream designers with a set of 
 GUI modules. The current core functionalities are:
 
- * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1].
-    + Modules: LifespanDesign and MaxLifespan    
- * Calculating terraforming activities (mass differences and simple terrain modifications).
-    + Module: ModifyTerrain
- * Habitat quality evaluations for various aquatic species.
-    + Module: HabitatEvaluation
- * Project cost-benefit assessments.
-    + Module: ProjectMaker
+ * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the LifespanDesign and MaxLifespan modules.   
+ 
+ * Calculate terraforming activities (mass differences and simple terrain modifications) with the ModifyTerrain module.
+ 
+ * Evaluate habitat quality for various aquatic species with the HabitatEvaluation module.
+ 
+ * Assess project cost-benefit with the ProjectMaker module.
 
 # Requirements
 
@@ -24,11 +23,9 @@ GUI modules. The current core functionalities are:
 
 # How to use it?
 
-1) Download the complete program file directory tree as zip. 
+1) Download the complete program file directory from [GitHub][2] or [sample data][4]. 
 
-2) The main program and modules are contained in the [RiverArchitect/RiverArchitect/][2] directory.
-
-3) Open the manual ([direct download link][3]) and follow the instructions in section 3 (Getting started)
+2) Get started using the manual ([direct download link][3]) with the instructions in section 3 (Getting started)
 
 4) Run the packages for stream design (package overview in section 1 of the [manual][3])
 
@@ -49,6 +46,6 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
-[2]: https://github.com/sschwindt/RiverArchitect/tree/master/RiverArchitect
-[3]: https://github.com/sschwindt/RiverArchitect/blob/master/RiverArchitect/00_Documentation/RiverArchitect_Manual_v01.pdf
+[2]: https://github.com/sschwindt/RiverArchitect_development
+[3]: https://github.com/sschwindt/RiverArchitect_development/blob/master/00_Documentation/CodeDocumentation.pdf
 [4]: https://www.dropbox.com/s/lkuqkm089rb0mm4/RiverArchitect_with_Example.zip?dl=0
