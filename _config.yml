@@ -2,4 +2,4 @@ theme: jekyll-theme-cayman
 title: River Architect
 
 show_downloads: true
-keep_files: [https://github.com/sschwindt/RiverArchitect_development/blob/master/00_Documentation/, CodeDocumentation.pdf]
+keep_files: true
