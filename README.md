@@ -26,12 +26,8 @@ The quick version: Download [River Architect][5], right-click on [Start_River_Ar
 
 The robust version:
 1) Download the complete program file directory from [GitHub][2] (or [sample data][4]). 
-
 2) Get started using the manual ([direct download link][3]) with the instructions in section 3 (Getting started). 
-
 4) Run the packages for stream design (package overview in section 1 of the [documentation][3])
-
-River Architect with a set of pre-generated sample files can be downloaded [here][4] (irregular updates).
 
 
 # About
