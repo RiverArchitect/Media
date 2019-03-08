@@ -22,12 +22,14 @@ GUI modules. The current core functionalities are:
 
 
 # How to use it?
+The quick version: Download [River Architect][5], right-click on [Start_River_Architect.bat][1] and open this batchfile in a text editor. Ensure that the file points to the correct python interpreter (ArcMap's python.exe -- typically stored in C:\Python27\ArcGISx6410.6\). Save edits, close the batchfile and double-click on it to launch River Architect.
 
-1) Download the complete program file directory from [GitHub][2] or [sample data][4]. 
+The robust version:
+1) Download the complete program file directory from [GitHub][2] (or [sample data][4]). 
 
-2) Get started using the manual ([direct download link][3]) with the instructions in section 3 (Getting started)
+2) Get started using the manual ([direct download link][3]) with the instructions in section 3 (Getting started). 
 
-4) Run the packages for stream design (package overview in section 1 of the [manual][3])
+4) Run the packages for stream design (package overview in section 1 of the [documentation][3])
 
 River Architect with a set of pre-generated sample files can be downloaded [here][4] (irregular updates).
 
@@ -49,3 +51,4 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 [2]: https://github.com/sschwindt/RiverArchitect_development
 [3]: https://github.com/sschwindt/RiverArchitect_development/blob/master/00_Documentation/CodeDocumentation.pdf
 [4]: https://www.dropbox.com/s/lkuqkm089rb0mm4/RiverArchitect_with_Example.zip?dl=0
+[5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
