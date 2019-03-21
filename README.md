@@ -46,5 +46,5 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
 [2]: https://github.com/sschwindt/RiverArchitect_development
 [3]: https://github.com/sschwindt/RiverArchitect_development/blob/master/00_Documentation/CodeDocumentation.pdf
-[4]: https://www.dropbox.com/s/lkuqkm089rb0mm4/RiverArchitect_with_Example.zip?dl=0
+[4]: https://www.dropbox.com/s/pv9n2y0nmulidme/RiverArchitect_with_Example.zip?dl=0
 [5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
