@@ -27,7 +27,10 @@ The quick version: Download [River Architect][5], right-click on [Start_River_Ar
 The robust version:
 1) Download the complete program file directory from [GitHub][2] (or [sample data][4]). 
 2) Get started using the manual ([direct download link][3]) with the instructions in section 3 (Getting started). 
-4) Run the packages for stream design (package overview in section 1 of the [documentation][3])
+4) Run the packages for stream design (see definitions in the [Wiki][3])
+
+# Documentation
+The usage of River Architect is described in the [River Architect's Wiki][3].
 
 
 # About
@@ -45,6 +48,6 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
 [2]: https://github.com/sschwindt/RiverArchitect_development
-[3]: https://github.com/sschwindt/RiverArchitect_development/blob/master/00_Documentation/CodeDocumentation.pdf
+[3]: https://github.com/sschwindt/RiverArchitect/wiki
 [4]: https://www.dropbox.com/s/pv9n2y0nmulidme/RiverArchitect_with_Example.zip?dl=0
 [5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
