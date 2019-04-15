@@ -25,9 +25,17 @@ GUI modules. The current core functionalities are:
 The quick version: Download [River Architect][5], right-click on [Start_River_Architect.bat][1] and open this batchfile in a text editor. Ensure that the file points to the correct python interpreter (ArcMap's python.exe -- typically stored in C:\Python27\ArcGISx6410.6\). Save edits, close the batchfile and double-click on it to launch River Architect.
 
 The robust version:
-1) Download the complete program file directory from [GitHub][2] (or [sample data][4]). 
-2) Get started using the manual ([direct download link][3]) with the instructions in section 3 (Getting started). 
-4) Run the packages for stream design (see definitions in the [Wiki][3])
+
+ 1. Download the program file directory from [GitHub][2] (or [sample data][4]). 
+ 2. Follow the [Installation][6] and [Signposts wiki][7] for setting up the Environment. 
+ 3. Run River Arhcitect's modules as described in the Wiki:
+   * [LifespanDesign](https://github.com/sschwindt/RiverArchitect/wiki/LifespanDesign)
+   * [MaxLifespan](https://github.com/sschwindt/RiverArchitect/wiki/MaxLifespan)
+   * [ModifyTerrain](https://github.com/sschwindt/RiverArchitect/wiki/ModifyTerrain)
+   * [HabitatEvaluation](https://github.com/sschwindt/RiverArchitect/wiki/HabitatEvaluation)
+   * [ProjectMaker](https://github.com/sschwindt/RiverArchitect/wiki/ProjectMaker)
+ 
+ The Wiki also provides detailed solutions for [Troubleshooting](https://github.com/sschwindt/RiverArchitect/wiki/Troubleshooting).
 
 # Documentation
 The usage of River Architect is described in the [River Architect's Wiki][3].
@@ -51,3 +59,6 @@ Bug reports, feature requests, and pull requests are welcome on GitHub at https:
 [3]: https://github.com/sschwindt/RiverArchitect/wiki
 [4]: https://www.dropbox.com/s/pv9n2y0nmulidme/RiverArchitect_with_Example.zip?dl=0
 [5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
+[6]: https://github.com/sschwindt/RiverArchitect/wiki/Installation
+[7]: https://github.com/sschwindt/RiverArchitect/wiki/Signposts
+
