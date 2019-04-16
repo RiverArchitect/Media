@@ -1,7 +1,21 @@
 theme: jekyll-theme-cayman
 title: River Architect
+description: A Python-based tool set for stream design, river restoration, and eco-hydraulic assessments.
+image: https://github.com/sschwindt/RiverArchitect/blob/master/images/title.png
+lang: en_US
 
 show_downloads: true
 
 plugins:
   - jekyll-seo-tag
+
+twitter:
+  username: RiverArchitect
+
+social:
+  name: RiverArchitect
+  links:
+    - https://twitter.com/ArchitectRiver
+
+webmaster_verifications:
+  google: google75c1f4a6bd62b782
