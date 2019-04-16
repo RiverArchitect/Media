@@ -2,3 +2,6 @@ theme: jekyll-theme-cayman
 title: River Architect
 
 show_downloads: true
+
+plugins:
+  - jekyll-seo-tag
