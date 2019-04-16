@@ -19,3 +19,7 @@ social:
 
 webmaster_verifications:
   google: google75c1f4a6bd62b782
+
+url: "https://sschwindt.github.io/RiverArchitect/"
+plugins:
+  - jekyll-sitemap
