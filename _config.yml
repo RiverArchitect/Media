@@ -23,4 +23,5 @@ webmaster_verifications:
 url: "https://sschwindt.github.io/RiverArchitect/"
 plugins:
   - jekyll-sitemap
-gems: - jekyll-sitemap
+gems: 
+  - jekyll-sitemap
