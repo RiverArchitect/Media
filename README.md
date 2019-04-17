@@ -49,7 +49,7 @@ terraforming planning, and migrating to QGIS's Python core.
 
 
 # Contributing
-Do not hesitate to contact sschwindt [at] ucdavis.edu and gpast [at] ucdavis.edu for reporting bugs, suggestions, or any feedback.
+Do not hesitate to contact river.architect.program [at] gmail.com for reporting bugs, suggestions, or any feedback.
 
 Bug reports, feature requests, and pull requests are welcome on GitHub at https://github.com/sschwindt/RiverArchitect .
 
