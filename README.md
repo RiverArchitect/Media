@@ -6,7 +6,7 @@ GUI modules (the last stable Python2 version can be downloaded [here][8] with sa
  
  * Calculate terraforming activities (mass differences and simple terrain modifications) with the ModifyTerrain module.
  
- * Evaluate habitat quality for various aquatic species with the HabitatEvaluation module.
+ * Evaluate habitat quality for various aquatic species with the HabitatEvaluation module and investigate functional flow regimes related to geomorphologic features ([Lane et al. 2019](https://www.onlinelibrary.wiley.com/doi/abs/10.1002/eco.1969)) with the EcoMorphology module (under construction with [@leogoesger](https://github.com/leogoesger)'s [FFF-connectors](https://github.com/leogoesger/FFF-connectors)).
  
  * Assess project cost-benefit with the ProjectMaker module.
 
@@ -22,18 +22,19 @@ GUI modules (the last stable Python2 version can be downloaded [here][8] with sa
 
 
 # How to use it?
-The quick version: Download [River Architect][5], right-click on [Start_River_Architect.bat][1] and open this batchfile in a text editor. Ensure that the file points to the correct python interpreter (ArcMap's python.exe -- typically stored in C:\Python27\ArcGISx6410.6\). Save edits, close the batchfile and double-click on it to launch River Architect.
+The quick version: Download [River Architect][5] and double-click on [Start_River_Architect.bat][1]. Modifications of the batchfile might be required, for example, to fit the conda environment. The standard ennvironment is `"%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy"`, which typically refers to `"C:\Program Files\ArcGIS\Pro\bin\Python\scripts\propy.bat"`. ArcGIS provides more information on running stand-alone Python scripts on their [website](https://pro.arcgis.com/en/pro-app/arcpy/get-started/using-conda-with-arcgis-pro.htm).
 
 The robust version:
 
  1. Download the program file directory from [GitHub][2] (or [sample data][4]). 
- 2. Follow the [Installation][6] and [Signposts wiki][7] for setting up the Environment. 
- 3. Run River Arhcitect's modules as described in the Wiki:
+ 2. Follow the detailed [Installation][6] instructions for setting up the Environment and read the [Signposts][7] about the terminology. 
+ 3. The application of *River Architect*'s modules are described on their Wiki pages:
    * [LifespanDesign](https://github.com/sschwindt/RiverArchitect/wiki/LifespanDesign)
    * [MaxLifespan](https://github.com/sschwindt/RiverArchitect/wiki/MaxLifespan)
    * [ModifyTerrain](https://github.com/sschwindt/RiverArchitect/wiki/ModifyTerrain)
    * [HabitatEvaluation](https://github.com/sschwindt/RiverArchitect/wiki/HabitatEvaluation)
    * [ProjectMaker](https://github.com/sschwindt/RiverArchitect/wiki/ProjectMaker)
+   * [EcoMorphology](https://github.com/sschwindt/RiverArchitect/wiki/EcoMorphology) (under construction)
  
  The Wiki also provides detailed solutions for [Troubleshooting](https://github.com/sschwindt/RiverArchitect/wiki/Troubleshooting).
  
