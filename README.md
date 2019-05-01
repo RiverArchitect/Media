@@ -56,6 +56,12 @@ Do not hesitate to contact river.architect.program [at] gmail.com for reporting 
 
 Bug reports, feature requests, and pull requests are welcome on GitHub at https://github.com/sschwindt/RiverArchitect .
 
+# Acknowledgment
+*River Architect* is the result of research projects funded by
+
+ - The [Yuba County Water Agency](https://www.yubawater.org/) (Marysville, California, USA) under Award #201016094 and Award #10446), and
+ - The [USDA National Institute of Food and Agriculture](https://nifa.usda.gov/), Hatch project number CA-D-LAW-7034-H.
+
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
 [2]: https://github.com/sschwindt/RiverArchitect_development
