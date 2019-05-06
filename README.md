@@ -16,7 +16,7 @@ GUI modules (the last stable Python2 version can be downloaded [here][8] with sa
  
  * 2D hydrodynamic modeling of multiple steady flow scenarios.
  
- * ESRI ArcMap and licenses for SpatialAnalyst (coming soon: update for ArcPro and Python 3).
+ * Esri SpatialAnalyst licenses (with *ArcPro*'s *Python* environment).
  
  * Batchfile launches are designed for working on any Windows platform.
 
