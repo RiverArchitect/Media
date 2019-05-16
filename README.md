@@ -1,6 +1,5 @@
 # River Architect ![logo](https://github.com/sschwindt/RiverArchitect/raw/master/images/logo_small.ico)
-River Architect is a Python3-based open-source package that supports stream designers with a set of 
-GUI modules (the last stable Python2 version can be downloaded [here][8] with sample data). The current core functionalities are:
+[River Architect](https://github.com/sschwindt/RiverArchitect/raw/master/docs/RiverArchitect.pdf) is a Python3-based open-source package that supports river designers with a set of GUI modules (the last stable Python2 version can be downloaded [here][8] with sample data). The current core functionalities are:
 
  * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the LifespanDesign and MaxLifespan modules.   
  
@@ -21,7 +20,7 @@ GUI modules (the last stable Python2 version can be downloaded [here][8] with sa
  * Batchfile launches are designed for working on any Windows platform.
 
 
-# How to use it?
+# Installation and Quick Usage
 The quick version: Download [River Architect][5] and double-click on [Start_River_Architect.bat][1]. Modifications of the batchfile might be required, for example, to fit the conda environment. The standard ennvironment is `"%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy"`, which typically refers to `"C:\Program Files\ArcGIS\Pro\bin\Python\scripts\propy.bat"`. ArcGIS provides more information on running stand-alone Python scripts on their [website](https://pro.arcgis.com/en/pro-app/arcpy/get-started/using-conda-with-arcgis-pro.htm).
 
 The robust version:
@@ -34,14 +33,14 @@ The robust version:
    * [ModifyTerrain](https://github.com/sschwindt/RiverArchitect/wiki/ModifyTerrain)
    * [HabitatEvaluation](https://github.com/sschwindt/RiverArchitect/wiki/HabitatEvaluation)
    * [ProjectMaker](https://github.com/sschwindt/RiverArchitect/wiki/ProjectMaker)
-   * [EcoMorphology](https://github.com/sschwindt/RiverArchitect/wiki/EcoMorphology) (under construction)
+   * [EcoMorphology](https://github.com/sschwindt/RiverArchitect/wiki/EcoMorphology) (under development)
  
  The Wiki also provides detailed solutions for [Troubleshooting](https://github.com/sschwindt/RiverArchitect/wiki/Troubleshooting).
  
 Please note that *River Architect* has undergone important changes since the last stable Python2 version ([download last stable Python2-River-Architect][8]).
 
 # Documentation
-The usage of River Architect is described in the [River Architect's Wiki][3].
+An overview presentation can be downloaded [here](https://github.com/sschwindt/RiverArchitect/raw/master/docs/RiverArchitect.pdf). The usage of River Architect is described in the [River Architect's Wiki][3].
 
 
 # About
