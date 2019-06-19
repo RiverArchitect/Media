@@ -33,17 +33,15 @@ today. Here are the guidelines we'd like you to follow:
 
 ## <a name="coc"></a> Code of Conduct
 
-Help us keep Rvier Architect open and inclusive. Please read and follow our [Code of Conduct][coc].
+Help us keep River Architect open and inclusive.
 
 ## <a name="requests"></a> Questions, Bugs, Features
 
 ### <a name="question"></a> Got a Question or Problem?
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports
-and feature requests. You've got much better chances of getting your question answered on dedicated
-support platforms, the best being [Stack Overflow][stackoverflow].
-
-Stack Overflow is a much better place to ask questions since:
+and feature requests. You have got much better chances of getting your question answered on dedicated
+support platforms, the best being [Stack Overflow](https://stackoverflow.com/):
 
 - there are thousands of people willing to help on Stack Overflow
 - questions and answers stay available for public viewing so your question / answer might help
