@@ -1,7 +1,8 @@
-# Contributing to River Architext
+# Contributing to River Architect
 We'd love for you to contribute to our source code and to make River Architect even better than it is
 today. Here are the guidelines we'd like you to follow:
 
+* [Coding Conventions](#conv)
 * [Code of Conduct](#coc)
 * [Questions and Problems](#question)
 * [Issues and Bugs](#issue)
@@ -10,6 +11,25 @@ today. Here are the guidelines we'd like you to follow:
 * [Issue Submission Guidelines](#submit)
 * [Pull Request Submission Guidelines](#submit-pr)
 * [Signing the CLA](#cla)
+
+## <a name="conv"></a> Coding Conventions
+*River Architect* code styles follow the [PEP 8 style conventions](https://www.python.org/dev/peps/pep-0008/). In brief, that means:
+
+ - Beautiful is better than ugly.
+ - Explicit is better than implicit.
+ - Simple is better than complex.
+ - Complex is better than complicated.
+ - Flat is better than nested.
+ - Sparse is better than dense.
+ - Readability counts.
+ - Special cases are not special enough to break the rules.
+ - Practicality beats purity.
+ - **Errors should never pass silently**.
+ - Unless explicitly silenced.
+ - In the face of ambiguity, there should be one - and preferably only one - obvious way to program.
+ - If the implementation is hard to explain, it is a bad idea.
+ - If the implementation is easy to explain, it may be a good idea.
+ - Use namespaces.
 
 ## <a name="coc"></a> Code of Conduct
 
