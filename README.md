@@ -49,7 +49,7 @@ In addition to the module descriptions, the [*River Architect* Wiki](https://git
 Please note that *River Architect* has undergone important changes since the last stable Python2 version ([download last stable Python2-River-Architect][8]).
 
 # Documentation
-An overview presentation can be downloaded [here](https://github.com/sschwindt/RiverArchitect/raw/master/docs/RiverArchitect.pdf). The usage of River Architect is described in the [River Architect's Wiki][3].
+An overview presentation can be downloaded [here](https://github.com/sschwindt/RiverArchitect/raw/master/docs/RiverArchitect.pdf). The usage of River Architect is described in the [*River Architect*'s Wiki][3].
 
 
 # About
@@ -62,7 +62,7 @@ terraforming planning, and migrating to QGIS's Python core.
 # Contributing
 Do not hesitate to contact river.architect.program [at] gmail.com for reporting bugs, suggestions, or any feedback.
 
-Bug reports, feature requests and pull requests are welcome [submit here](https://github.com/sschwindt/RiverArchitect).
+Bug reports, feature requests and pull requests are welcome ([submit here](https://github.com/sschwindt/RiverArchitect)).
 
 # Acknowledgment
 *River Architect* is the result of research projects funded by
