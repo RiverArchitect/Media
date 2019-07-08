@@ -1,1 +1,1 @@
-Please read the Troubleshooting chapter in 00_Documents/RiverArchitect_Manual.pdf
+Please refer to the Wiki or email us in the case of special support requests: river.architect.program [at] gmail.com
