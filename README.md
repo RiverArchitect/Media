@@ -1,11 +1,11 @@
 # River Architect ![logo](https://github.com/sschwindt/RiverArchitect/raw/master/images/logo_small.ico)
 [River Architect](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf) is a Python3-based open-source code that supports river designers with a set of GUI modules. Sample data can be downloaded [here](https://github.com/RiverArchitect/SampleData/archive/master.zip). The current core functionalities are:
 
- * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the [LifespanDesign](https://github.com/RiverArchitect/Welcome/wiki/LifespanDesign) and [MaxLifespan](https://github.com/RiverArchitect/Welcome/wiki/MaxLifespan) modules.   
+ * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the [LifespanDesign](https://riverarchitect.github.io/RA_wiki/LifespanDesign) and [MaxLifespan](https://riverarchitect.github.io/RA_wiki/MaxLifespan) modules.   
 
- * Terraforming concepts with the [ModifyTerrain](https://github.com/RiverArchitect/Welcome/wiki/ModifyTerrain) module using threshold value-based DEM modifications or the sophisticated [River Builder](https://github.com/RiverArchitect/Welcome/wiki/RiverBuilder).
+ * Terraforming concepts with the [ModifyTerrain](https://riverarchitect.github.io/RA_wiki/wiki/ModifyTerrain) module using threshold value-based DEM modifications or the sophisticated [River Builder](https://riverarchitect.github.io/RA_wiki/RiverBuilder).
 
- * Evaluate ecohydraulic and morphological site and river assets within the Eco-Morphology modules for [calculating Seasonal Habitat Area](https://github.com/RiverArchitect/Welcome/wiki/SHArC) and optimizing [habitat connectivity](https://github.com/RiverArchitect/Welcome/wiki/Connectivity).
+ * Evaluate ecohydraulic and morphological site and river assets within the Eco-Morphology modules for [calculating Seasonal Habitat Area](https://riverarchitect.github.io/RA_wiki/SHArC) and optimizing [habitat connectivity](https://riverarchitect.github.io/RA_wiki/Connectivity).
 
  * Generate construction plans, cost estimates, and variant efficiency metrics with the [ProjectMaker](https://github.com/RiverArchitect/Welcome/wiki/ProjectMaker) module.
  
@@ -33,18 +33,18 @@ The robust version:
  1. Read the [Signposts][7] to learn about the terminology used in *River Architect* and create river [*Conditions*](https://github.com/RiverArchitect/Welcome/wiki/Signposts#new-condition) with the [GetStarted](https://github.com/RiverArchitect/Welcome/wiki/Signposts#getstarted) module to start analyses. 
  1. The application of *River Architect*'s modules are described on their Wiki pages:
    * Lifespan mapping
-     + [Lifespan and Design map creation](https://github.com/RiverArchitect/Welcome/wiki/LifespanDesign)
-     + [Best Lifespan identification](https://github.com/RiverArchitect/Welcome/wiki/MaxLifespan)
+     + [Lifespan and Design map creation](https://riverarchitect.github.io/RA_wiki/LifespanDesign)
+     + [Best Lifespan identification](https://riverarchitect.github.io/RA_wiki/MaxLifespan)
    * Terraforming
-     + [ModifyTerrain](https://github.com/RiverArchitect/Welcome/wiki/ModifyTerrain)
-     + [Volume Assessment (earthworks)](https://github.com/RiverArchitect/Welcome/wiki/VolumeAssessment)
+     + [ModifyTerrain](https://riverarchitect.github.io/RA_wiki/ModifyTerrain)
+     + [Volume Assessment (earthworks)](https://riverarchitect.github.io/RA_wiki/VolumeAssessment)
    * Eco-Morphology
-     + [SHArC (Seasonal Habitat Area Calculator)](https://github.com/RiverArchitect/Welcome/wiki/SHArC)
-     + [Connectivity Analyses](https://github.com/RiverArchitect/Welcome/wiki/Connectivity)
-   * [ProjectMaker](https://github.com/RiverArchitect/Welcome/wiki/ProjectMaker)
+     + [SHArC (Seasonal Habitat Area Calculator)](https://riverarchitect.github.io/RA_wiki/SHArC)
+     + [Connectivity Analyses](https://riverarchitect.github.io/RA_wiki/Connectivity)
+   * [ProjectMaker](https://riverarchitect.github.io/RA_wiki/ProjectMaker)
 
 
-In addition to the module descriptions, the [*River Architect* Wiki](https://github.com/RiverArchitect/Welcome/wiki) also provides detailed solutions for [Troubleshooting](https://github.com/RiverArchitect/Welcome/wiki/Troubleshooting).
+In addition to the module descriptions, the [*River Architect* Wiki](https://riverarchitect.github.io/RA_wiki/main_page) also provides detailed solutions for [Troubleshooting](https://riverarchitect.github.io/RA_wiki/Troubleshooting).
 
 Please note that *River Architect* has undergone important changes since the last stable Python2 version ([download last stable Python2-River-Architect][8]).
 
@@ -73,9 +73,9 @@ Bug reports, feature requests and pull requests are welcome ([submit here](https
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
 [2]: https://github.com/sschwindt/RiverArchitect_development
-[3]: https://github.com/RiverArchitect/Welcome/wiki
+[3]: https://riverarchitect.github.io/RA_wiki/
 [4]: https://www.dropbox.com/s/pv9n2y0nmulidme/RiverArchitect_with_Example.zip?dl=0
 [5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
-[6]: https://github.com/RiverArchitect/Welcome/wiki/Installation
-[7]: https://github.com/RiverArchitect/Welcome/wiki/Signposts
+[6]: https://riverarchitect.github.io/RA_wiki/Installation
+[7]: https://riverarchitect.github.io/RA_wiki/Signposts
 [8]: https://www.dropbox.com/s/8d6c096r4ouzxy2/RiverArchitect_Py2.zip?dl=0
