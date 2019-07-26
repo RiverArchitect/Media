@@ -1,7 +1,4 @@
-_site
-.sass-cache
+_config.yml
+_site/*
+*Thumbs.db
 Gemfile.lock
-*.gem
-
-# Folder to not ignore
-!/RiverArchitect/

@@ -1,27 +1,38 @@
-theme: jekyll-theme-cayman
-title: River Architect
-description: A Python-based tool set for stream design, river restoration, and eco-hydraulic assessments.
-image: https://github.com/sschwindt/RiverArchitect/blob/master/images/title.png
-lang: en_US
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
 
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: blue
+markdown: kramdown
+google_analytics: riverarchitect
+title: River Architect
 show_downloads: true
 
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: River Architect
+
+description: Python3-based open-source code that aids ecomorphological river designs.
+author:
+  name: riverarchitect
+  email: river.architect.program@gmail.com
+  github: RiverArchitect
+  twitter: RiverArchitect
+  bio: Best available river science
+  email_md5: 19d9897345d50a5514c25198a3ac5683
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# set it as url of an image
+sidebar_background_image: https://github.com/RiverArchitect/Welcome/raw/master/images/title.png
+
+BASE_PATH:
+
 plugins:
-  - jekyll-seo-tag
-
-twitter:
-  username: RiverArchitect
-
-social:
-  name: RiverArchitect
-  links:
-    - https://twitter.com/ArchitectRiver
-
-webmaster_verifications:
-  google: google75c1f4a6bd62b782
-
-url: "https://sschwindt.github.io/RiverArchitect/"
-plugins:
-  - jekyll-sitemap
-gems: 
-  - jekyll-sitemap
+  - jekyll-paginate
