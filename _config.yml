@@ -3,7 +3,7 @@
 paginate: 10 # pagination based on number of posts
 paginate_path: "page:num"
 exclude: ["README.md"] # files to exclude
-highlighter: blue
+highlighter: rouge
 markdown: kramdown
 google_analytics: riverarchitect
 title: River Architect
@@ -30,7 +30,7 @@ categories_path: categories.html
 tags_path: tags.html
 
 # set it as url of an image
-sidebar_background_image: https://github.com/RiverArchitect/Welcome/raw/master/images/title.png
+# sidebar_background_image: https://github.com/RiverArchitect/Welcome/raw/master/images/title.png
 
 BASE_PATH:
 
