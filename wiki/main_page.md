@@ -22,6 +22,8 @@ River Architect
 
 # Requirements
 
+***
+
  * Digital terrain elevation models (DEMs).
 
  * 2D hydrodynamic modeling of multiple steady flow scenarios.
@@ -30,7 +32,10 @@ River Architect
 
 
 
-# Installation and Quick Usage
+# Installation and Quick Usage (short version)
+
+***
+
 The quick version: Download [River Architect][5] and double-click on [Start_River_Architect.bat][1]. Modifications of the batchfile might be required, for example, to fit the conda environment. The standard environment is `"%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy"`, which typically refers to `"C:\Program Files\ArcGIS\Pro\bin\Python\scripts\propy.bat"`. ArcGIS provides more information on running stand-alone Python scripts on their [website](https://pro.arcgis.com/en/pro-app/arcpy/get-started/using-conda-with-arcgis-pro.htm).
 
 The robust version:
@@ -56,10 +61,16 @@ In addition to the module descriptions, the [*River Architect* Wiki](https://riv
 Please note that *River Architect* has undergone important changes since the last stable Python2 version ([download last stable Python2-River-Architect][8]).
 
 # Documentation
+
+***
+
 An overview presentation can be downloaded [here](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf). The usage of River Architect is described in the [*River Architect*'s Wiki][3].
 
 
 # About
+
+***
+
 The code was developed based on data from California's Yuba River and example results can be downloaded.
 
 Future developments will focus on improving the GUIs, developing the ModifyTerrain module for automating
@@ -67,11 +78,17 @@ terraforming planning, and migrating to QGIS's Python core.
 
 
 # Contributing
+
+***
+
 Do not hesitate to contact river.architect.program [at] gmail.com for reporting bugs, suggestions, or any feedback.
 
 Bug reports, feature requests and pull requests are welcome ([submit here](https://github.com/RiverArchitect/Welcome).
 
 # Acknowledgment
+
+***
+
 *River Architect* is the result of research projects funded by
 
  - The [Yuba County Water Agency](https://www.yubawater.org/) (Marysville, California, USA) under Award #201016094 and Award #10446), and
