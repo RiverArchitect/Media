@@ -8,6 +8,11 @@ River Architect
 
 ***
 
+![raillu](https://github.com/RiverArchitect/Welcome/raw/master/images/RA_welcome.png)
+<br/>
+
+
+
 [River Architect](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf) is a Python3-based open-source code that supports river designers with a set of GUI modules. Sample data can be downloaded [here](https://github.com/RiverArchitect/SampleData/archive/master.zip). The current core functionalities are:
 
  * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the [LifespanDesign](https://riverarchitect.github.io/RA_wiki/LifespanDesign) and [MaxLifespan](https://riverarchitect.github.io/RA_wiki/MaxLifespan) modules.   
@@ -16,9 +21,9 @@ River Architect
 
  * Evaluate ecohydraulic and morphological site and river assets within the Eco-Morphology modules for [calculating Seasonal Habitat Area](https://riverarchitect.github.io/RA_wiki/SHArC) and optimizing [habitat connectivity](https://riverarchitect.github.io/RA_wiki/Connectivity).
 
- * Generate construction plans, cost estimates, and variant efficiency metrics with the [ProjectMaker](https://github.com/RiverArchitect/Welcome/wiki/ProjectMaker) module.
+ * Generate construction plans, cost estimates, and variant efficiency metrics with the [ProjectMaker](https://riverarchitect.github.io/RA_wiki/ProjectMaker) module.
  
- * Produce high-quality maps with *River Architect*'s built-in [Mapping routines](https://github.com/RiverArchitect/Welcome/wiki/Mapping).
+ * Produce high-quality maps with *River Architect*'s built-in [Mapping routines](https://riverarchitect.github.io/RA_wiki/Mapping).
 
 
 
@@ -44,7 +49,7 @@ The robust version:
 
  1. Download the program file directory from [GitHub][2] (or [sample data][4]). 
  1. Follow the detailed [Installation][6] instructions for setting up the Environment.
- 1. Read the [Signposts][7] to learn about the terminology used in *River Architect* and create river [*Conditions*](https://github.com/RiverArchitect/Welcome/wiki/Signposts#new-condition) with the [GetStarted](https://github.com/RiverArchitect/Welcome/wiki/Signposts#getstarted) module to start analyses. 
+ 1. Read the [Signposts][7] to learn about the terminology used in *River Architect* and create river [*Conditions*](https://riverarchitect.github.io/RA_wiki/Signposts#new-condition) with the [GetStarted](https://riverarchitect.github.io/RA_wiki/Signposts#getstarted) module to start analyses. 
  1. The application of *River Architect*'s modules are described on their Wiki pages:
    * Lifespan mapping
      + [Lifespan and Design map creation](https://riverarchitect.github.io/RA_wiki/LifespanDesign)
