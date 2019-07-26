@@ -1,81 +1,163 @@
-# River Architect ![logo](https://github.com/sschwindt/RiverArchitect/raw/master/images/logo_small.ico)
-[River Architect](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf) is a Python3-based open-source code that supports river designers with a set of GUI modules. Sample data can be downloaded [here](https://github.com/RiverArchitect/SampleData/archive/master.zip). The current core functionalities are:
+Welcome to the River Architect ![logo](https://github.com/RiverArchitect/Welcome/raw/master/images/logo_small.ico) Wiki
+======================================================
+<details><summary> Table of Contents </summary><p>
 
- * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the [LifespanDesign](https://riverarchitect.github.io/RA_wiki/LifespanDesign) and [MaxLifespan](https://riverarchitect.github.io/RA_wiki/MaxLifespan) modules.   
+1. [Setup River Architect][1]
+   - [Installation](Installation#started)
+   - [Program file structure](Installation#structure)
+   - [Requirements](Installation#req)
+   - [Logfiles](Installation#logs)
+1. [Get started, terminology and signposts][2]
+   - [Welcome and **Condition** creation](Signposts#getstarted)
+       + [Create *Condition*s](Signposts#new-condition)
+	   + [Analyze Flows](Signposts#ana-flows)
+	   + [Input definition files](Signposts#inpfile)
+	   + [Map extent definition files](Signposts#inmaps)
+   - [Geofile conventions](Signposts#terms)
+   - [Prepare input Rasters](Signposts#inputs)
+1. Modules
+   - Lifespans
+       * The [`LifespanDesign` module][3] maps sustainable [features](River-design-features)
+         + [Parameter hypothesis](LifespanDesign-parameters)
+         + [River design and restoration **features**](River-design-features)
+         + [Input definition files](Signposts#inpfile)
+         + [Code extension and modification](LifespanDesign-code)
+       * Identification of best-performing [features](River-design-features) with the [`MaxLifespan` module][4]
+         + [Quick GUIde](MaxLifespan#actgui)
+         + [Working principles](MaxLifespan#actprin)
+         + [Code extension and modification](MaxLifespan#actcode)
+   - Morphology (Terraforming)
+       * [River **Reach** definitions](RiverReaches)
+       * [[ModifyTerrain]]
+           + [Quick GUIde](ModifyTerrain#mtgui)
+           + [Threshold-based Grading or Widening (Broaden)](ModifyTerrain#mtdemmod)
+           + [River Builder](RiverBuilder)
+           + [Working principle](ModifyTerrain#mtprin)
+           + [Code extension and modification](ModifyTerrain#mtcode)
+       * [[VolumeAssessment]]
+           + [Quick GUIde](VolumeAssessment#gui)
+           + [Working principle](VolumeAssessment#vaprin)
+           + [Set level of detection](VolumeAssessment#vacode)
+   - Ecohydraulics
+       * Assess habitat area with the [`SHArC` module][6]
+           + [Quick GUIde](SHArC#hegui)
+           + [Define **Aquatic Ambiances** for **Fish**](SHArC#hefish)
+           + [**SHArea** calculation](SHArC#herunSHArea)
+           + [Working principles](SHArC-working-principles#heprin)
+           + [Predefined **Fish** species](SHArC#hefish)
+           + [Edit Fish template](aqua-modification#hecode)
+       * [Habitat Connectivity](Connectivity)
+           + Wiki pending.
+       * Make eco-morphological assessments of river conditions with the [`EcoMorphology` module][60]
+           + Implementation pending.
+   - [`ProjektMaker`][7] generates cost-benefit plans and tables of river designs
+     * [Quick GUIde](ProjectMaker#pmquick)
+     * [**Cost** quantity assessment](ProjectMaker#pmcq)
+     * [Ecological (habitat) benefit assessment (Calculate **SHArea**)](ProjectMaker#pmSHArea)
+   - [`Tools`][8] contain beta-version routines (under development)
+1. [FAQ][9]
+1. [Troubleshooting and Error message handling][10]
+     * [Known issues](Troubleshooting#issues)
+     * [How to troubleshoot](Troubleshooting#howto)
+     * [Error messages](Troubleshooting#error-messages)
+     * [Warning messages](Troubleshooting#warning-messages)
 
- * Terraforming concepts with the [ModifyTerrain](https://riverarchitect.github.io/RA_wiki/wiki/ModifyTerrain) module using threshold value-based DEM modifications or the sophisticated [River Builder](https://riverarchitect.github.io/RA_wiki/RiverBuilder).
+</p></details>
 
- * Evaluate ecohydraulic and morphological site and river assets within the Eco-Morphology modules for [calculating Seasonal Habitat Area](https://riverarchitect.github.io/RA_wiki/SHArC) and optimizing [habitat connectivity](https://riverarchitect.github.io/RA_wiki/Connectivity).
+***
 
- * Generate construction plans, cost estimates, and variant efficiency metrics with the [ProjectMaker](https://github.com/RiverArchitect/Welcome/wiki/ProjectMaker) module.
- 
- * Produce high-quality maps with *River Architect*'s built-in [Mapping routines](https://github.com/RiverArchitect/Welcome/wiki/Mapping).
+[*River Architect*](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf) serves for the GIS-based planning of habitat enhancing river design features regarding their lifespans, parametric characteristics, optimum placement in the terrain, and ecological benefit. A main graphical user interface (GUI) provides five modules for generating lifespan and design maps, action (optimum lifespan) maps, terrain modification (terraforming) assessment of digital elevation models (DEM), habitat evaluation, and project cost-benefit analyses.
 
+*River Architect* invites to analyses and modifications of the longevity and ecological quality of riverscapes. Different planning bases ("conditions") can be easily created using an introductory module called **[GetStarted](Signposts#getstarted)**. **Lifespan**, **Morphology (Terraforming)** and **Ecohydraulic** assessments can then be created on the basis of the *Conditions*, including the creation of project plans and cost tables with a **Project Maker** module.
 
+[**Lifespan**][3] maps indicate the expected longevity of restoration features as a function of terrain change, morphological characteristics, and 2D hydrodynamic modeling results. **Design maps** are a side product of [lifespan and design mapping][3] and indicate required feature dimensions for stability, such as the minimum required size of angular boulders to avoid their mobilization during floods (more information in [Schwindt et al.2019][11]). **Best lifespan maps** result from the comparison of lifespan and design maps of multiple restoration features and assign features with the highest longevity to each pixel of a raster. Thus, the [**Max Lifespan**][4] module assess optimum features as a function of highest lifespans among comparable feature groups such as terraforming or vegetation planting species.
 
-# Requirements
+**Morphology (Terraforming)** includes routines to [**Modify Terrain**][5] for river restoration purposes. Currently, two terrain modification algorithms are implemented: (1) Threshold value-based terrain modifications in terms of [grading](River-design-features#grading) or [widening / broaden rivers](River-design-features#berms) for riparian forest establishment; and (2) [River Builder](RiverBuilder) for the creation of synthetic river valley. A **[Volume Assessment](VolumeAssessment)** module can compares an original (pre-project or pre-terraforming application) and a modified DEM (\"with implementation\" or post-feature application) to determine required earth movement (terraforming volumes) works.
 
- * Digital terrain elevation models (DEMs).
+**Ecohydraulics** assessments include the evaluation of the ecohydraulic state and connectivity of riverscapes. The **[Habitat Area](SHArC)** (Seasonal Habitat Area Calculator) module applies user-defined flows (discharges) for the spatial evaluation of the habitat suitability index (*HSI*) in terms of Seasonal Habitat Area (SHArea). The hydraulic habitat suitability results from 2D hydrodynamic numerical model outputs of flow depth and velocity. In addition, a  \"cover\" option can be used to assess ecohydraulic effects of cobble, boulder, vegetation, and streamwood. The **[Habitat Connectivity](Connectivity)** module provides insights into the connection of wetted areas on floodplains and how these may be improved to enhance the survivorship of fry / juvenile fish.
 
- * 2D hydrodynamic modeling of multiple steady flow scenarios.
+The [**Project Maker**][7] module creates preliminary construction plans and evaluates the costs for gain in usable habitat for target fish species and lifestages. A unit cost workbook provides relevant costs and the gain in usable habitat area results from the *SHArC* module.
 
- * Esri's *ArcPro* *Python* environment with *SpatialAnalyst* license (Windows only).
+A set of [**Tools**][8] provides *Python* console scripts that are under development and will be implemented in future versions of the *River Architect* GUI.
 
+*River Architect* represents a comprehensive tool for state-of-the-art planning of ecologic river modifications. The integrated application of *River Architect* to habitat enhancing project planning is illustrated in the following flowchart. 
+The modules and tool-scripts can also be individually applied for other purposes than suggested in the flowchart.
 
+![flowchart](https://github.com/RiverArchitect/Welcome/raw/master/images/flowchart.png)
 
-# Installation and Quick Usage
-The quick version: Download [River Architect][5] and double-click on [Start_River_Architect.bat][1]. Modifications of the batchfile might be required, for example, to fit the conda environment. The standard environment is `"%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy"`, which typically refers to `"C:\Program Files\ArcGIS\Pro\bin\Python\scripts\propy.bat"`. ArcGIS provides more information on running stand-alone Python scripts on their [website](https://pro.arcgis.com/en/pro-app/arcpy/get-started/using-conda-with-arcgis-pro.htm).
+The procedure of project design following the flowchart involves the following steps:
 
-The robust version:
+1.  Generate a terrain elevation model (DEM).
 
- 1. Download the program file directory from [GitHub][2] (or [sample data][4]). 
- 1. Follow the detailed [Installation][6] instructions for setting up the Environment.
- 1. Read the [Signposts][7] to learn about the terminology used in *River Architect* and create river [*Conditions*](https://github.com/RiverArchitect/Welcome/wiki/Signposts#new-condition) with the [GetStarted](https://github.com/RiverArchitect/Welcome/wiki/Signposts#getstarted) module to start analyses. 
- 1. The application of *River Architect*'s modules are described on their Wiki pages:
-   * Lifespan mapping
-     + [Lifespan and Design map creation](https://riverarchitect.github.io/RA_wiki/LifespanDesign)
-     + [Best Lifespan identification](https://riverarchitect.github.io/RA_wiki/MaxLifespan)
-   * Terraforming
-     + [ModifyTerrain](https://riverarchitect.github.io/RA_wiki/ModifyTerrain)
-     + [Volume Assessment (earthworks)](https://riverarchitect.github.io/RA_wiki/VolumeAssessment)
-   * Eco-Morphology
-     + [SHArC (Seasonal Habitat Area Calculator)](https://riverarchitect.github.io/RA_wiki/SHArC)
-     + [Connectivity Analyses](https://riverarchitect.github.io/RA_wiki/Connectivity)
-   * [ProjectMaker](https://riverarchitect.github.io/RA_wiki/ProjectMaker)
+2.  Determine relevant discharges for 2D hydrodynamic modeling:
 
+    -   At least three annual discharges describing the \"most of the time\" - situation of the considered river for habitat evaluation assessments. *River Architect*'s *Tools* contain scripts for generating flow duration curves from gaging station data.
 
-In addition to the module descriptions, the [*River Architect* Wiki](https://riverarchitect.github.io/RA_wiki/main_page) also provides detailed solutions for [Troubleshooting](https://riverarchitect.github.io/RA_wiki/Troubleshooting).
+    -   At least three flood discharges against which potential [restoration features](River-design-features) have to withstand (determine lifespan intersects).
 
-Please note that *River Architect* has undergone important changes since the last stable Python2 version ([download last stable Python2-River-Architect][8]).
+3.  Run a 2D hydrodynamic model (steady) with all determined discharges to generate hydraulic snap-shots of the river.
 
-# Documentation
-An overview presentation can be downloaded [here](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf). The usage of River Architect is described in the [*River Architect*'s Wiki][3].
+4.  Create a [Condition](Signposts#conditions) using the [GetStarted](Signposts#getstarted) module. The *Condition* should include *GeoTIFFs* of the initial (existing or pre-project) river state:
 
+    -   A detrended digital elevation model (DEM);
 
-# About
-The code was developed based on data from California's Yuba River and example results can be downloaded.
+    -   Flow depth and velocity for multiple discharges Rasters from 2D hydrodynamic modeling (see [Signposts](Signposts#conditions));
 
-Future developments will focus on improving the GUIs, developing the ModifyTerrain module for automating
-terraforming planning, and migrating to QGIS's Python core.
+    -   A substrate map (`dmean` for metric or `dmean_ft` for U.S. customary units); relevant methods are described in [Detert et al. (2018)][12]; [Stähly et al. (2017)][13]; and [Jackson et al. (2013)][14];
 
+    -   Datasets that can be used to assess design feature stability, such as [side channel design criteria](River-design-features#sidechnl);
 
-# Contributing
-Do not hesitate to contact river.architect.program [at] gmail.com for reporting bugs, suggestions, or any feedback.
+    -   Topographic change Rasters (Topographic Change Detection or DEM differencing according to [Wyrick and Pasternack 2016][15]);
 
-Bug reports, feature requests and pull requests are welcome ([submit here](https://github.com/RiverArchitect/Welcome).
+    -   A depth to groundwater table Raster (`d2w`);
 
-# Acknowledgment
-*River Architect* is the result of research projects funded by
+    -   A morphological unit Raster (see [Wyrick and Pasternack (2014)][16]).
 
- - The [Yuba County Water Agency](https://www.yubawater.org/) (Marysville, California, USA) under Award #201016094 and Award #10446), and
- - The [USDA National Institute of Food and Agriculture](https://nifa.usda.gov/), Hatch project number CA-D-LAW-7034-H.
+5.  Apply the [*LifespanDesign*][3] module to [framework (terraforming) features](River-design-features#featoverview).
 
+6.  Lifespan and Design maps, as well as expert assessment, serve for the identification of relevant [framework (terraforming) features](River-design-features#featoverview).
 
-[1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
-[2]: https://github.com/sschwindt/RiverArchitect_development
-[3]: https://riverarchitect.github.io/RA_wiki/
-[4]: https://www.dropbox.com/s/pv9n2y0nmulidme/RiverArchitect_with_Example.zip?dl=0
-[5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
-[6]: https://riverarchitect.github.io/RA_wiki/Installation
-[7]: https://riverarchitect.github.io/RA_wiki/Signposts
-[8]: https://www.dropbox.com/s/8d6c096r4ouzxy2/RiverArchitect_Py2.zip?dl=0
+7.  Iterative terraforming (if relevant):
+
+    -   Use the [*ModifyTerrain*][5] module for creating synthetic river valley with [River Builder](RiverBuilder); or apply threshold value-based terrain [grading](River-design-features#grading) or [broadening of the river bed](River-design-features#berms). *Please note that both routines require post-processing with computer-aided design (translation into real world coordinates and / or edge smoothing).*
+
+    -   Re-compile the flow depth and velocity maps (re-run 2D model) with the modified DEM.
+
+    -   Verify the suitability of the modified DEM (e.g., barrier height to ensure flood safety and habitat suitability with the [[SHArC]] module); if the verification show weaknesses adapt the terraforming and re-compile the flow depth and velocity maps until terraforming is satisfactory.
+
+    -   Use the *[[VolumeAssessment]]* module (Morphology tab) to compare pre- (initial) and post-project (modified) DEMs for determining required excavation and fill volumes.
+
+8.  Apply the [*LifespanDesign*][3] module to [vegetation plantings](River-design-features#plants) and [(other) bioengineering features](River-design-features#bioeng) based on the terraformed DEM (or the original / initial DEM if no terraforming applies).
+
+9.  Use the [*MaxLifespan*][4] module to identify best performing (highest lifespan) [vegetation plantings](River-design-features#plants) and [(other) bioengineering features](River-design-features#bioeng).
+
+10. If the soils are too coarse (i.e., the capillarity is not high enough to enable plant root growth), apply the connectivity feature ["incorporate fine sediment in soils"](River-design-features#finesed).
+
+11. If gravel augmentation methods are applicable: Consecutively apply the [*LifespanDesign*][3] and [*MaxLifespan*][4] modules to [connectivity features](River-design-features#featoverview) to foster self-sustaining, artificially created ecomorphological patterns within the terraforming process.\
+    If gravel is added in-stream, re-run the numerical model for the assessment of [gravel stability](River-design-features#rocks) with the [*LifespanDesign*][3] module and the combined habitat suitability with the [*SHArC*][6] module to compare the [**S**easonal **H**abitat **Area** (**SHArea**)](SHArC#herunSHArea) before and after enhancement of [Aquatic Ambiances for target fish species (lifestages)](SHArC#hefish).
+
+12. Use the [*SHArC*][6] to assess the *"existing"* (pre-project) and *"with implementation"* (post-project) habitat suitability in terms of annually usable habitat area (SHArea).
+
+13. Use the *[[ProjectMaker]]* to calculate costs, the net gain in SHArea, and their ratio as a metric defining the project trade-off.
+
+The working principles of the [*LifespanDesign*][3], [*MaxLifespan*][4], [*ModifyTerrain*][5], *[[VolumeAssessment]]*, [*SHArC*][6], and [*ProjectMaker*][7] modules are explained on their own Wiki pages. The differentiation between [terraforming (framework)](River-design-features#featoverview), [vegetation plantings and other bioengineering](River-design-features#featoverview), and [connectivity features](River-design-features#featoverview) is described within the [LifespanDesign Wiki](River-design-features). The [[Installation]] Wiki pages describe the propper installation, file organization and environment of *River Architect*.
+
+***
+
+[1]: https://github.com/RiverArchitect/Welcome/wiki/Installation
+[2]: https://github.com/RiverArchitect/Welcome/wiki/Signposts
+[3]: https://github.com/RiverArchitect/Welcome/wiki/LifespanDesign
+[4]: https://github.com/RiverArchitect/Welcome/wiki/MaxLifespan
+[5]: https://github.com/RiverArchitect/Welcome/wiki/ModifyTerrain
+[6]: https://github.com/RiverArchitect/Welcome/wiki/SHArC
+[60]: https://github.com/RiverArchitect/Welcome/wiki/EcoMorphology
+[7]: https://github.com/RiverArchitect/Welcome/wiki/ProjectMaker
+[8]: https://github.com/RiverArchitect/Welcome/wiki/Tools
+[9]: https://github.com/RiverArchitect/Welcome/wiki/FAQ
+[10]: https://github.com/RiverArchitect/Welcome/wiki/Troubleshooting
+[11]: https://www.sciencedirect.com/science/article/pii/S0301479718312751
+[12]: http://www.sciencedirect.com/science/article/pii/S1001627918300350
+[13]: https://ascelibrary.org/doi/abs/10.1061/%28ASCE%29HY.1943-7900.0001286
+[14]: http://www.yubaaccordrmt.com/Annual%20Reports/Mapping%20and%20Modeling/LYRsubstrate20131218.pdf
+[15]: https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3854
+[16]: http://www.sciencedirect.com/science/article/pii/S0169555X14000099
