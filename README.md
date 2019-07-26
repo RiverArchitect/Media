@@ -1,9 +1,5 @@
-River Architect
-===============
-
-[River Architect](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf) is a Python3-based open-source code that supports river designers with a set of GUI modules. Sample data can be downloaded [here](https://github.com/RiverArchitect/SampleData/archive/master.zip).
-
-# Core Functions
+# River Architect ![logo](https://github.com/sschwindt/RiverArchitect/raw/master/images/logo_small.ico)
+[River Architect](https://github.com/RiverArchitect/Welcome/raw/master/docs/RiverArchitect.pdf) is a Python3-based open-source code that supports river designers with a set of GUI modules. Sample data can be downloaded [here](https://github.com/RiverArchitect/SampleData/archive/master.zip). The current core functionalities are:
 
  * Lifespan mapping of stream design features according to [Schwindt et al. (2019)][1] with the [LifespanDesign](https://riverarchitect.github.io/RA_wiki/LifespanDesign) and [MaxLifespan](https://riverarchitect.github.io/RA_wiki/MaxLifespan) modules.   
 
@@ -76,10 +72,10 @@ Bug reports, feature requests and pull requests are welcome ([submit here](https
 
 
 [1]: https://www.sciencedirect.com/science/article/pii/S0301479718312751 "Lifespan mapping"
-[2]: https://github.com/riverarchitect/program
+[2]: https://github.com/sschwindt/RiverArchitect_development
 [3]: https://riverarchitect.github.io/RA_wiki/
 [4]: https://www.dropbox.com/s/pv9n2y0nmulidme/RiverArchitect_with_Example.zip?dl=0
-[5]: https://github.com/riverarchitect/program/archive/master.zip
+[5]: https://github.com/sschwindt/RiverArchitect_development/archive/master.zip
 [6]: https://riverarchitect.github.io/RA_wiki/Installation
 [7]: https://riverarchitect.github.io/RA_wiki/Signposts
 [8]: https://www.dropbox.com/s/8d6c096r4ouzxy2/RiverArchitect_Py2.zip?dl=0
