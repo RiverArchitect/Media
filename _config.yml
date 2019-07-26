@@ -32,7 +32,7 @@ tags_path: tags.html
 # set it as url of an image
 # sidebar_background_image: https://github.com/RiverArchitect/Welcome/raw/master/images/title.png
 
-BASE_PATH:
+BASE_PATH: https://github.com/RiverArchitect/Welcome/
 
 plugins:
   - jekyll-paginate
